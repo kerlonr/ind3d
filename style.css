@@ -53,10 +53,14 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: calc(
-    33.33% - 25px
-  ); /* Cada card ocupa 33.33% da largura da página menos o espaçamento */
+  width: calc(33.33% - 25px);
   max-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 .card-impressora img {
@@ -80,14 +84,20 @@ h1 {
   border-radius: 25px;
   text-decoration: none;
   width: 50%;
-  margin: 0 auto;
+  margin: 5px auto;
   align-items: center;
   justify-content: center;
 }
 
+.acessar-btn:hover {
+  background-color: rgb(28 187 40);
+}
+.assistir-btn:hover {
+  background-color: rgb(15, 174, 236);
+}
+
 .card-impressora a:hover {
   background-image: initial;
-  background-color: rgb(28 187 40);
 }
 
 /* Footer */
