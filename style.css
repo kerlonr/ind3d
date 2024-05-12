@@ -7,7 +7,6 @@
 
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   margin: 0;
@@ -31,6 +30,7 @@ header {
 
 /* Main Content */
 main {
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
 }
@@ -96,4 +96,12 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
