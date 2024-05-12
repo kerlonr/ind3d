@@ -86,7 +86,8 @@ h1 {
 }
 
 .card-impressora a:hover {
-  background: #555;
+  background-image: initial;
+  background-color: rgb(28 187 40);
 }
 
 /* Footer */
