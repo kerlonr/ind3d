@@ -7,7 +7,7 @@
 
 /* Global Styles */
 body {
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
@@ -43,8 +43,10 @@ h1 {
 .card-container {
   display: flex;
   justify-content: center;
-  width: 100%; /* Garante que os cards ocupem toda a largura do contêiner */
+  flex-wrap: wrap;
+  width: 100%;
   margin: 1rem;
+  gap: 10px;
 }
 
 .card-impressora {
@@ -52,18 +54,17 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin: 0 12.5px; /* Espaçamento de 25px dividido igualmente entre os cards */
   width: calc(
-    25% - 25px
-  ); /* Cada card ocupa 25% da largura da página menos o espaçamento */
-  max-width: 200px; /* Define o tamanho máximo do card */
+    33.33% - 25px
+  ); /* Cada card ocupa 33.33% da largura da página menos o espaçamento */
+  max-width: 200px;
 }
 
 .card-impressora img {
   display: block;
   margin: 0 auto 20px;
   border-radius: 5px;
-  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do card */
+  max-width: 100%;
 }
 
 .card-impressora h2 {
@@ -104,4 +105,24 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.not-found h1 {
+  margin-bottom: 20px;
+}
+
+.not-found img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .card-impressora {
+    width: calc(50% - 25px);
+  }
+  .card-impressora a {
+    padding: 0.5rem 3rem;
+  } /* Cada card ocupa 50% da largura da página menos o espaçamento */
 }
