@@ -31,7 +31,8 @@ header {
 
 /* Main Content */
 main {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
@@ -39,17 +40,30 @@ h1 {
   margin-bottom: 20px;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Garante que os cards ocupem toda a largura do contêiner */
+  margin: 1rem;
+}
+
 .card-impressora {
   background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 0 12.5px; /* Espaçamento de 25px dividido igualmente entre os cards */
+  width: calc(
+    25% - 25px
+  ); /* Cada card ocupa 25% da largura da página menos o espaçamento */
+  max-width: 200px; /* Define o tamanho máximo do card */
 }
 
 .card-impressora img {
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do card */
 }
 
 .card-impressora h2 {
@@ -58,13 +72,17 @@ h1 {
 }
 
 .card-impressora a {
-  display: block;
+  display: flex;
   text-align: center;
   background: #333;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 25px;
   text-decoration: none;
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-impressora a:hover {
