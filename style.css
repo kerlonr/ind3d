@@ -87,6 +87,7 @@ h1 {
   margin: 5px auto;
   align-items: center;
   justify-content: center;
+  transition: 0.1s linear;
 }
 
 .acessar-btn:hover {
@@ -94,6 +95,10 @@ h1 {
 }
 .assistir-btn:hover {
   background-color: rgb(15, 174, 236);
+}
+.acessar-btn:hover,
+.assistir-btn:hover {
+  transform: scale(1.1);
 }
 
 .card-impressora a:hover {
