@@ -144,3 +144,7 @@ footer {
     width: calc(50% - 25px);
   }
 }
+
+.fa-solid {
+  margin-right: 8px;
+}
