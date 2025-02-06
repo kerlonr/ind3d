@@ -1,125 +1,138 @@
-/* Reset CSS */
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
 }
-
-.container {
-  max-width: 960px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 20px;
-}
-
-/* Header */
-header {
-  background: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* Main Content */
 main {
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  flex-direction: column;
+  gap: 1%;
 }
 
-h1 {
+header {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 1.5rem 0;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 1rem;
-  gap: 10px;
+  border-bottom: 2px solid #333;
 }
 
 .card-impressora {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 15px;
   width: calc(33.33% - 25px);
-  max-width: 200px;
+  text-align: center;
+  color: #e0e0e0;
+  border: 1px solid #333;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   align-content: center;
+  position: relative;
+  border-top: 5px solid;
+  margin: 1%;
+}
+
+.card-impressora.laranja {
+  border-top-color: orange;
+  color: orange;
+}
+
+.card-impressora.azul {
+  border-top-color: blue;
+  color: blue;
+}
+
+.card-impressora.ender3v3se {
+  border-top-color: #9112ff;
+  color: #9112ff;
+}
+
+.card-impressora.k1max {
+  border-top-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+.card-impressora.ender3s1 {
+  border-top-color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
 }
 
 .card-impressora img {
-  display: block;
-  margin: 0 auto 20px;
-  border-radius: 5px;
-  max-width: 100%;
-}
-
-.card-impressora h2 {
-  text-align: center;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  max-width: 80%;
+  margin-bottom: 15px;
 }
 
 .card-impressora a {
-  display: flex;
-  text-align: center;
-  background: #333;
+  background-color: #333;
   color: #fff;
-  padding: 0.5rem 3rem;
+  padding: 0.6rem 2rem;
   border-radius: 25px;
   text-decoration: none;
-  width: 50%;
   margin: 5px auto;
   align-items: center;
   justify-content: center;
-  transition: 0.1s linear;
+  transition: 0.2s ease;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem auto;
+  flex-wrap: wrap;
 }
 
-.acessar-btn:hover {
-  background-color: rgb(28 187 40);
+.acessar-btn.ender3v3se:hover {
+  background-color: #9112ff;
 }
+
+.acessar-btn.laranja:hover {
+  background-color: orange;
+}
+
+.acessar-btn.azul:hover {
+  background-color: blue;
+}
+
+.acessar-btn.ender3s1:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.acessar-btn.k1max:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
 .assistir-btn:hover {
-  background-color: rgb(15, 174, 236);
-}
-.acessar-btn:hover,
-.assistir-btn:hover {
-  transform: scale(1.1);
+  background-color: #2196f3;
 }
 
-.card-impressora a:hover {
-  background-image: initial;
-}
-
-/* Footer */
 footer {
-  background: #333;
-  color: #fff;
-  padding: 20px 0;
-}
-
-.footer-container {
-  text-align: center;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .footer-container p {
   margin: 0;
 }
-
 .not-found {
   display: flex;
   flex-direction: column;
@@ -138,13 +151,34 @@ footer {
   max-width: 100%;
 }
 
-/* Media Query para telas menores */
 @media (max-width: 768px) {
   .card-impressora {
-    width: calc(50% - 25px);
+    width: calc(50% - 10px);
+  }
+  main {
+    padding: 1rem;
+  }
+  footer {
+    text-align: center;
   }
 }
 
-.fa-solid {
-  margin-right: 8px;
+/* Smartphones */
+@media (max-width: 480px) {
+  .card-impressora {
+    width: 100%;
+    margin: 2% 10%;
+  }
+  .card-impressora img {
+    max-width: 70%;
+  }
+  .card-impressora a {
+    width: 80%;
+  }
+  header {
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 1rem;
+  }
 }
